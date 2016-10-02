@@ -3,7 +3,7 @@ import org.gradle.internal.os.OperatingSystem;
 apply plugin: 'com.android.model.application'
 
 final APP_ABIS = ["armeabi-v7a", "arm64-v8a", "x86"]
-final BOOST_SHARED_LIBS = ["boost_serialization"]
+final BOOST_SHARED_LIBS = ["boost_serialization", "boost_system", "boost_filesystem"]
 
 model {
     android {
