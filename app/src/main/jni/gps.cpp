@@ -1,4 +1,5 @@
 #include <fstream>
+#include <boost/filesystem.hpp>
 
 #include "gps.hpp"
 
