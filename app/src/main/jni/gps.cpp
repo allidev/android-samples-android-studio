@@ -27,6 +27,7 @@ void load(std::string const &root, gps_position &g)
     std::ifstream ifs(root + "/" + FILENAME);
     boost::filesystem::path tmp = "/root";
     boost::filesystem::path fname = "filename";
+    tmp /= fname;
     boost::archive::text_iarchive ia(ifs);
     // read class state from archive
     ia >> g;
