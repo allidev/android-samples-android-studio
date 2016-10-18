@@ -1,5 +1,8 @@
 #include <fstream>
 #include <boost/filesystem.hpp>
+#include <boost/log/trivial.hpp>
+#include <boost/log/sinks.hpp>
+#include <boost/log/utility/setup/file.hpp>
 
 #include "gps.hpp"
 
@@ -19,6 +22,9 @@ void save(std::string const &root, gps_position const &g)
     // write class instance to archive
     oa << g;
     // archive and stream closed when destructors are called
+    boost::shared_ptr<boost::log::sinks::synchronous_sink<boost::log::sinks::text_file_backend>> file_sink;
+    file_sink = boost::log::add_file_log("sample.log");
+    BOOST_LOG_TRIVIAL(trace) << "a trace message";
 }
 
 void load(std::string const &root, gps_position &g)
