@@ -5,7 +5,7 @@
 /.idea/libraries
 /.idea/encodings.xml
 /.idea/runConfigurations.xml
-/,idea/misc.xml
+/.idea/misc.xml
 .DS_Store
 /build
 /captures
