@@ -8,6 +8,7 @@ final BOOST_SHARED_LIBS = ["boost_serialization",
                            "boost_filesystem",
                            "boost_date_time",
                            "boost_regex",
+                           "boost_chrono",
                            "boost_log",
                            "boost_thread"]
 
